@@ -1,0 +1,20 @@
+{
+    "name": "srv01 - gallo-retrovisori.it",
+    "host": "141.95.32.106",
+    "protocol": "sftp",
+    "port": 2210,
+    "username": "frenky",
+    "remotePath": "/var/www/html/www.gallo-retrovisori.it",
+    "privateKeyPath": "C:\\Users\\ramon\\.ssh\\id_ed25519_srv1",
+    "passphrase": "4du2245t3114Lun4@#",
+    "uploadOnSave": true,
+    "useTempFile": false,
+    "openSsh": true,
+    "interactiveAuth": true,
+    "ignore": [
+      "**/.settings/**",
+      "**/.vscode/**",
+      "**/.project",
+      "**/.buildpath"
+    ]
+}

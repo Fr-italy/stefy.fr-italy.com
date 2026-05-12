@@ -1,0 +1,12 @@
+# Bitbucket / Git
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Copie locali o estrazioni non da versionare
+_manuale_extract.txt
+_manuale_temp.docx
+
+# Non pubblicare credenziali SFTP su Bitbucket
+.vscode/sftp.json
