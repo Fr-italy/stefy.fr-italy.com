@@ -6,8 +6,8 @@
 
   Strategie di layout: struttura header–corpo–footer; barra di navigazione ripetuta;
   colori blu/indaco e azzurri per coerenza con spiritualità e concentrazione;
-  testo giustificato nei blocchi; su seconda_pagina uso float:left per affiancare
-  testo e colonna parole chiave (come da teoria float nel manuale).
+  testo giustificato nei blocchi; su seconda_pagina uso display:flex sul contenitore
+  .layout-visione per affiancare testo e colonna parole chiave (impaginazione flex).
 
   Elemento nuovo non trattato in aula (punto 7 manuale): box-shadow su contenitori
   e su immagini, per dare profondità senza appesantire. Fonte sintassi: MDN Web Docs,
@@ -134,6 +134,20 @@ h2 {
     box-shadow: 12px 12px 0 rgba(26, 35, 126, 0.12), 0 18px 40px rgba(15, 23, 42, 0.2);
 }
 
+/* Pagina Visione: due colonne affiancate con Flexbox (punto 3 manuale: impaginazione) */
+.layout-visione {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+    width: min(96%, 1100px);
+    margin: 0 auto 1rem auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
 .contenitore2 {
     text-align: justify;
     font-family: Georgia, "Times New Roman", serif;
@@ -143,14 +157,15 @@ h2 {
     border-style: dotted;
     border-width: 2px;
     border-color: #1a237e;
-    width: min(65%, 560px);
+    flex: 1 1 280px;
+    max-width: min(100%, 560px);
+    width: 100%;
     padding: 2rem;
-    margin: 0 0 1rem 0;
-    margin-left: 20px;
-    float: left;
+    margin: 0;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22);
+    box-sizing: border-box;
 }
 
 .contenitore3 {
@@ -162,19 +177,14 @@ h2 {
     border-style: dotted;
     border-width: 2px;
     border-color: #1a237e;
-    width: min(26%, 220px);
+    flex: 0 1 220px;
+    width: min(100%, 220px);
     padding: 1.25rem 1rem;
-    margin-right: 30px;
-    float: right;
+    margin: 0;
     background: linear-gradient(160deg, #e8eaf6, #fff8e1);
     border-radius: 10px;
     box-shadow: 6px 6px 0 rgba(57, 73, 171, 0.15), 0 10px 24px rgba(15, 23, 42, 0.18);
-}
-
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+    box-sizing: border-box;
 }
 
 .elenco1 {
@@ -197,7 +207,6 @@ h2 {
 }
 
 .piede {
-    clear: both;
     margin-top: 2.5rem;
     padding: 1.25rem 1rem;
     text-align: center;
@@ -268,20 +277,4 @@ h2 {
     font-weight: bold;
     padding: 0.5rem;
     color: #1a237e;
-}
-
-/* Quarto modo di applicare regole: media query nel foglio esterno (stesso file del link) */
-@media (max-width: 768px) {
-    .contenitore2,
-    .contenitore3 {
-        float: none;
-        width: min(94%, 640px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .barra-nav a {
-        display: block;
-        margin: 0.2rem 0;
-    }
 }

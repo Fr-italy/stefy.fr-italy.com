@@ -11,13 +11,13 @@
       Motivazione argomento: presentare la visione non tradizionale degli angeli come
       metafore psicologiche, in linea con il tema scelto dal manuale.
 
-      Layout: uso della proprietà float (manuale, §1 e consegna punto 3): testo principale
-      float:left e colonna termini float:right, con clearfix per il rientro del footer.
+      Layout: impaginazione con Flexbox (display:flex su .layout-visione) per affiancare
+      testo principale (.contenitore2) e colonna termini (.contenitore3).
 
       Parte nuova: ombre sui contenitori affiancati (box-shadow in stile.css).
 
-      Sitografia: contenuti rielaborati dal testo grezzo del progetto; teoria float dal
-      manuale CSS parte 2.
+      Sitografia: contenuti rielaborati dal testo grezzo del progetto; flex dal manuale
+      (proprietà flex / Grid tra i metodi di impaginazione, parte 1 manuale CSS).
 
       Riflessione personale: affiancare parole chiave a un testo lungo aiuta a
       memorizzare i concetti e rende la pagina più “scansionabile”.
@@ -36,7 +36,7 @@
 
     <main class="main-wrap">
         <h2>Visione</h2>
-        <div class="clearfix">
+        <div class="layout-visione">
             <div class="contenitore2">
                 <p>La visione dell’Angelologia secondo Igor Sibaldi è molto <b>diversa</b> da quella tradizionale religiosa.</p>
                 <p>Per Sibaldi, angeli = <span style="color: crimson;">forze interiori</span>, possibilità della mente e livelli più profondi della coscienza umana.</p>
